@@ -19,6 +19,9 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
+
+INFURANODE = `https://mainnet.infura.io/v3/YOUR_INFURA_NODE_HERE`;
+
 module.exports = {
   solidity: {
       compilers: [
@@ -55,13 +58,13 @@ module.exports = {
     localhost: {
         chainId: 31337, // Chain ID should match the hardhat network's chainid
         forking: {
-            url: `https://mainnet.infura.io/v3/7fc5b156ba264dc7a266365c52d9e6c7`,
+            url: INFURANODE,
         },
         loggingEnabled: true,
     },
     hardhat: {
         forking: {
-            url: `https://mainnet.infura.io/v3/7fc5b156ba264dc7a266365c52d9e6c7`,
+            url: INFURANODE,
         },
     },
   },

@@ -28,7 +28,7 @@
     "solidity-coverage": "^0.7.18"
   },
   "scripts": {
-    "mainnet-forking": "npx hardhat node --fork https://mainnet.infura.io/v3/7fc5b156ba264dc7a266365c52d9e6c7",
+    "mainnet-forking": "npx hardhat node --fork https://mainnet.infura.io/v3/YOUR_INFURA_NODE_HERE",
     "dl": "npx hardhat run scripts/local/deploy.js --network localhost",
     "test": "npx hardhat test",
     "compile": "npx hardhat compile",

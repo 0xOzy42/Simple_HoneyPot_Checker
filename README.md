@@ -1,15 +1,15 @@
-# Basic Sample Hardhat Project
+# Simple Honey Pot Checker
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This contract allows you to know if a token is a scam or not, and also to know the exact % of sell/buy taxes.
 
-Try running some of the following tasks:
+You just need to change in "HONEY.json" the statemutability for the function "checkHoneyMain" to "view" just after you compile the project. This assure you to make a staticcall about the double swap and not affect the real balance of the smart contract. (or simply add "staticcal" in your calls directly, this is the option by default)
+
+run into a fork of the mainnet :
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+npm run test
 ```
+
+# Important
+
+Don't forget to change your infura node in "hardhat.config.js" => INFURANODE = `https://mainnet.infura.io/v3/YOUR_INFURA_NODE_HERE`
